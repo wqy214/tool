@@ -1,0 +1,13 @@
+start.sh
+export JAVA_HOME=jdk1.8.0_111
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+echo "Application will be started background......"
+nohup java -jar gw_ws_boot-0.0.1-SNAPSHOT.jar > logs/nohup.out &
+echo $! > gw_ws_boot-0.0.1-SNAPSHOT.pid
+
+
+stop.sh
+PID=$(cat gw_ws_boot-0.0.1-SNAPSHOT.pid)  
+kill -9 $PID 
+echo "Application has been stopped ..."
