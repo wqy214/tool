@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=com.zte.mybatis.driver -DartifactId=jconn3 -Dversion=0.0.1 -Dpackaging=jar -Dfile=F:\IdeaProjects\0229U08\release\manager\manager_release_for_win\apache-tomcat-5.5.36\common\lib\jconn3.jar
